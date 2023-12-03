@@ -50,7 +50,7 @@ window.onload = function() {
         { x: 422.5, y: 949.7, offsetX: 50, offsetY: 50, radius: 25}, //kumamoto
         { x: 467.3, y: 974.8, offsetX: 50, offsetY: 50, radius: 25}, //miyagi
         { x: 331.3, y: 1012.1, offsetX: 100, offsetY: 170, radius: 25}, //kagoshima
-        { x: 9.3, y: 1366, offsetX: 180, offsetY: 130, radius: 25}, //okinawa
+        { x: 9.3, y: 1366, offsetX: 150, offsetY: 100, radius: 25}, //okinawa
         { x: 765, y: 770, offsetX: 50, offsetY: 50, radius: 25} //shiga
     ];
 
@@ -148,19 +148,20 @@ window.onload = function() {
     }
 
     function onMouseUp() {
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
-        if (draggedPiece) {
-            const rect = draggedPiece.getBoundingClientRect();
-            const pieceCenter = {
-                x: rect.left + (rect.width / 2),
-                y: rect.top + (rect.height / 2)
-            };
-            const pieceIndex = parseInt(draggedPiece.getAttribute('data-index'));
-            if (isNearby(pieceCenter, correctPositions[pieceIndex])) {
-                draggedPiece.style.left = correctPositions[pieceIndex].x + 'px';
-                draggedPiece.style.top = correctPositions[pieceIndex].y + 'px';
-            }
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+    if (draggedPiece) {
+        const rect = draggedPiece.getBoundingClientRect();
+        const pieceCenter = {
+            x: rect.left + window.scrollX + (rect.width / 2),
+            y: rect.top + window.scrollY + (rect.height / 2)
+        };
+        const pieceIndex = parseInt(draggedPiece.getAttribute('data-index'));
+        if (isNearby(pieceCenter, correctPositions[pieceIndex])) {
+            draggedPiece.style.left = correctPositions[pieceIndex].x + 'px';
+            draggedPiece.style.top = correctPositions[pieceIndex].y + 'px';
         }
     }
+}
+
 }
