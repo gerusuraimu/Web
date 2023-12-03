@@ -1,0 +1,12 @@
+#puzzle-container {
+    position: relative;
+    width: 1680px;
+    height: 1576px;
+    background-image: url('../images/000_0.png');
+    background-size: cover;
+}
+
+.piece {
+    position: absolute;
+    cursor: pointer;
+}
