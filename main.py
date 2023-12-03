@@ -1,7 +1,3 @@
-import os
-import hashlib
-from datetime import timedelta
-
 from flask import Flask, render_template
 
 

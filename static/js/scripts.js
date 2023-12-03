@@ -36,7 +36,7 @@ window.onload = function() {
         { x: 987.4, y: 509.3, offsetX: 50, offsetY: 50, radius: 25 }, //yamagata
         { x: 471.6, y: 835.5, offsetX: 50, offsetY: 50, radius: 25 }, //yamaguchi
         { x: 908.5, y: 751, offsetX: 50, offsetY: 50, radius: 25 }, //yamanashi
-        { x: 946, y: 756.2, offsetX: 400, offsetY: 400, radius: 25}, //tokyo
+        { x: 946, y: 756.2, offsetX: 50, offsetY: 100, radius: 25}, //tokyo
         { x: 572, y: 901, offsetX: 50, offsetY: 50, radius: 25}, //kochi
         { x: 546, y: 813.7, offsetX: 50, offsetY: 50, radius: 25}, //hiroshima
         { x: 618.7, y: 795.5, offsetX: 50, offsetY: 50, radius: 25}, //okayama
